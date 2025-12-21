@@ -1,0 +1,33 @@
+.app-layout {
+  display: flex;
+  gap: 20px;
+  min-height: calc(100vh - 160px);
+}
+.sidebar {
+  width: 250px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(2, 6, 23, 0.04);
+  box-shadow: 0 6px 20px rgba(2, 6, 23, 0.04);
+}
+.main-content {
+  flex: 1;
+  min-height: 400px;
+}
+.card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(2, 6, 23, 0.04);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.03);
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+}

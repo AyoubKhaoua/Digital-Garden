@@ -1,0 +1,58 @@
+/* Notes page styles */
+.notes-hero h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.note-card {
+  background: #fff;
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(13, 38, 59, 0.05);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(13, 38, 59, 0.08);
+}
+.note-card h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+.note-card .muted {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.note-meta {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.85rem;
+}
+.theme-label {
+  font-weight: 600;
+}
+
+/* Small screens */
+@media (max-width: 576px) {
+  .notes-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .notes-hero .btn {
+    align-self: stretch;
+  }
+}

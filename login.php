@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,15 +44,21 @@
 
 </html>
 <?php
-include './includes/auth.php';
+include './config/database.php';
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (!empty($_GET['user']) && !empty($_GET['password'])) {
         $email = $_GET['user'];
         $password = $_GET['password'];
-        $Query = "select * from users where email='$email' and password='$password'";
+        $Query = "select username,id from users where email='$email' and password='$password'";
         $check = mysqli_query($connect, $Query);
         $res = mysqli_num_rows($check);
+
         if ($res) {
+
+            $getname = mysqli_query($connect, $Query);
+            $row = mysqli_fetch_assoc($getname);
+            $_SESSION['name'] = $row['username'];
+            $_SESSION['id'] = $row['id'];
             header('Location:dashboard.php');
         }
     }

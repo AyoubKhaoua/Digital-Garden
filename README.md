@@ -87,8 +87,7 @@ CREATE TABLE notes (
   theme_id INT NOT NULL,
   title VARCHAR(255),
   content TEXT,
-  importance TINYINT DEFAULT 3,
-  tags VARCHAR(255),
+  importance  ENUM('1','2','3','4','5'),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (theme_id) REFERENCES themes(id) ON DELETE CASCADE
 );

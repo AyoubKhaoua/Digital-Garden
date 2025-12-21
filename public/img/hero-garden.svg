@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#1fbf73"/><stop offset="1" stop-color="#0f9d58"/></linearGradient>
+  </defs>
+  <rect width="800" height="200" rx="12" fill="url(#g1)"/>
+  <g fill="#ffffff" font-family="Verdana">
+    <text x="32" y="54" font-size="28" font-weight="700">Digital Garden</text>
+    <text x="32" y="84" font-size="14" opacity="0.95">Nurture ideas — collect, grow, and share</text>
+  </g>
+  <g transform="translate(620,20)" fill="#ffffff" opacity="0.9">
+    <path d="M10 60 C20 40, 40 40, 50 60 C60 80, 20 95, 10 60"/>
+    <circle cx="36" cy="50" r="6"/>
+  </g>
+</svg>

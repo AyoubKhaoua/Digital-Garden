@@ -35,3 +35,12 @@ CREATE TABLE notes (
 );
 -----
 SELECT * from users;
+
+INSERT into
+    themes (
+        user_id,
+        title,
+        color,
+        nbrnotes
+    )
+VALUES (3, 'husa', 'gray', 6)

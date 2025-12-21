@@ -39,7 +39,7 @@
 
 </html>
 <?php
-include './includes/auth.php';
+include './config/database.php';
 if (/* isset($_POST['submit']) */$_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = stripslashes($_POST['username']);
     $email = stripslashes($_POST['email']);

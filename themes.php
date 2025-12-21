@@ -29,8 +29,9 @@
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
                         <?php
                         $id = $_SESSION['id'];
-                        $query = mysqli_query($connect, "SELECT * FROM themes  where id='$id'");
+                        $query = mysqli_query($connect, "SELECT * FROM themes  where user_id='$id'");
                         if (mysqli_num_rows($query) > 0) {
+
                             while ($row = mysqli_fetch_assoc($query)) {
                                 $title = htmlspecialchars($row['title']);
                                 $color = htmlspecialchars($row['color'] ?? '#ffffff');
@@ -44,7 +45,7 @@
                                 echo '<p class="card-text text-muted mb-2">Notes: ' . $nbrnotes . '</p>';
                                 echo '<div class="mt-auto d-flex gap-2">';
                                 echo '<a class="btn btn-danger" href="delete.php?id=' . $id . '" class="btn btn-sm btn-primary">delete</a>';
-                                echo '<a class="btn btn-primary text-white "href="createTheme.php?edit=' . $id . '" class="btn btn-sm btn-outline-secondary">Edit</a>';
+                                echo '<a class="btn btn-primary text-white "href="editTheme.php?edit=' . $id . '" class="btn btn-sm btn-outline-secondary">Edit</a>';
                                 echo '</div>';
                                 echo '</div></div></div>';
                             }
